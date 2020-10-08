@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <bits/stdc++.h> 
 using namespace std;
 
 
@@ -40,12 +41,15 @@ vector<bool> doorOpenOptimized(int n){
 
 /*
 Aufgabe 2:
+Aus N Insassen [1, N] wird täglich ZUFÄLLIG ein Insasse gewählt, wann können die Insassen sicher gehen, dass alle N Insassen im Lichtraum waren?
 
-Grundannahmen: ein Insasse pro Tag wird ins Zimmer des Wärters geholt, Zähler ist der erste Insasse, alle Insassen sind intelligent genug die Strategie zu befolgen; 
+Grundannahmen: Anfang: Licht an , ein Insasse pro Tag wird ins Zimmer des Wärters geholt, der Zähler ist der erste Insasse im Lichtraum (Tag 1), 
+               alle Insassen sind intelligent genug die Strategie zu befolgen; 
 Strategie der Insassen: der erste Insasse der in den Lichtbetätigunsraum reingelassen wird ist der Zähler;
                         nur der Zähler darf das Licht ausmachen, falls ein Insasse zum ersten Mal in dem Lichtraum ist, macht er das Licht an,
-                        sofern es noch nicht an ist. Somit weiß der Zähler beim nächsten Besuch im Lichtraum, dass mindestens eine Person da war.
-                        Der Zähler muss 100 mal das Licht ausmachen, danach kann er sicher sein, dass alle Insassen einmal drin waren.
+                        sofern es noch nicht an ist. Falls der Insasse schon mal im Raum war, lässt er alles beim Alten. 
+                        Somit weiß der Zähler beim nächsten Besuch im Lichtraum, ob mindestens eine Person im Lichtraum war.
+                        Wenn der Zähler das 100'ste. mal das Licht ausmacht, kann er sicher sein, dass alle Insassen einmal drin waren.
 */
 
 int countDaysOfPrisoners(int n){
@@ -57,6 +61,14 @@ int countDaysOfPrisoners(int n){
     return days; 
 }
 
+/*
+Aufgabe 3:
+    N Touristen müssen deren eigene Hutfarbe erraten. Die Touristen sehen lediglich die Hutfarbe der anderen Touristen, aber nicht deren eigene. 
+    Es gibt 2 Farben, die Touristen dürfen nicht miteinander kommunizieren.
+    Idee: Farben als Abfolge [1, N] --> [0,1,1,0,1,1,0,0,0,0,1,0,1,0]
+    Strategie: Person 1 rät seine Hutfarbe. Falls die Hutfarbe dem seines Nachbarn entspricht, sagt er dies mit lauter Stimme, falls nicht, mit leiser Stimme. 
+    Somit können wir mindestens N -1 Touristen retten.
+*/
 
 int main(){
     int n = 100; 
