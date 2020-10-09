@@ -25,13 +25,6 @@
  *                      Die Touristen dürfen nicht miteinander kommunizieren.     *
  *                                                                                *
  *                                                                                *                                                                             
- *   Aufgabe 4:         N touristen mit 2 verschiedenen Hutfarben, sollen sich    *
- *                      in 2 verschiedenen Reihen sortieren und zwar nach ihrer   *
- *                      Hutfarbe. Dabei dürfen sich nicht kommunizieren, oder     *
- *                      sich berühren. Die Touristen kennen nur die Hutfarbe der  *
- *                      anderen Touristen, deren eigene jedoch nicht.             *
- *                                                                                *
- *                                                                                *
  *********************************************************************************/
 
 #include <iostream>
@@ -96,16 +89,6 @@ Aufgabe 3: Lösung:
     falls nicht, mit leiser Stimme. Somit können wir mindestens N -1 Touristen retten.
 */
 
-
-/*
-Aufgabe 4: Lösung:
-    Idee: erste Person stellt sich in eine beliebige Reihe. 
-    Fall 1: [1 X] --> der Nachfolger X stellt sich in Richtung A zu seinem Vörgänger, da der Vor-
-            in der richtigen Reihe steht.  
-    Fall 2: [X 1] --> der Nachfolger X stellt sich in Richtung B zu seinem Vörgänger. Der Vorgänger
-    muss auf die andere Seite. Nun ist die Person i sortiert und genauso sortieren sich alle anderen. 
-    Die letzte Person n hat keinen Nachfolger, somit muss der bereits sortierte Vorgänger n-1 aushelfen. 
-*/
 
 int main(){
     int n = 100; 
