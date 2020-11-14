@@ -43,7 +43,20 @@ public class Main {
   }
 
   public static void main(String[] args) {
-      dfs(startX, startY); 
-      printSolution(visited); 
-      }
+     dfs(startX, startY); 
+     printSolution(visited); 
+    
+     /* OUTPUT:
+     
+     *  0  0  0  0  0  0  0 
+     *  *  0  0  0  0  0  0 
+     0  *  0  0  0  0  0  0 
+     0  *  *  *  *  0  0  0 
+     0  0  0  0  *  *  0  0 
+     0  0  0  0  0  *  0  0 
+     0  0  0  0  0  *  0  0 
+     0  0  0  0  0  *  *  * 
+
+     */
+  }
 }
