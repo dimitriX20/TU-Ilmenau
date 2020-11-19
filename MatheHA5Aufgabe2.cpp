@@ -23,7 +23,7 @@ int main() {
         preVal =f(iterations);  
         iterations++;   
     }
-    cout<< iterations-1 << "'es Gliedveränderung wäre: " << f(iterations); 
+    cout<< iterations-1 << "'es Glied, Gliedveränderung wäre: " << f(iterations); 
 }
 
 /*
@@ -39,6 +39,6 @@ OUTPUT:
 7'es Glied, Wert: 0.424672 Änderung: 0.00285714
 8'es Glied, Wert: 0.422749 Änderung: -0.00192308
 9'es Glied, Wert: 0.424104 Änderung: 0.00135501
-10'es Gliedveränderung wäre: 0.000745156
+10'es Glied, Gliedveränderung wäre: 0.000745156
 
 */
